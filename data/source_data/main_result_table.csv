@@ -1,0 +1,9 @@
+dataset,unit,probe_or_setting,frame_metric,operational_metric,normal_fae_h,tail_or_robustness,paper_role
+CTAT,"247,324 positive-label microsegments across 4 tasks",label-semantics negative control,median 1 frame; median 0 ms,attack-process DER/RMTTD not applicable,available,10/50/100/500 ms columns are semantically identical,endpoint applicability gate
+ROAD,activity-group-isolated attack events,context,Frame Macro-F1=0.8742 (rank 2),DER@100ms=0.9310 (rank 2); RMTTD@5s=0.1044s,68.13 (rank 2),0.1/1/5 s cooldown and 10/50/100/500 ms deadlines available,within-dataset rank reversal
+ROAD,activity-group-isolated attack events,frame,Frame Macro-F1=0.9061 (rank 1),DER@100ms=0.8276 (rank 3); RMTTD@5s=0.3885s,169.47 (rank 3),0.1/1/5 s cooldown and 10/50/100/500 ms deadlines available,within-dataset rank reversal
+ROAD,activity-group-isolated attack events,timing,Frame Macro-F1=0.4956 (rank 3),DER@100ms=1.0000 (rank 1); RMTTD@5s=0.0038s,38.59 (rank 1),0.1/1/5 s cooldown and 10/50/100/500 ms deadlines available,within-dataset rank reversal
+CarDS,mechanism-disjoint fold 0,HGB; 30 FAE/h; 1 s cooldown,reported probe configuration,Macro-TPR=0.4922; DER@100ms=0.2222; RMTTD@5s=3.700s,5.42,worst=0.0000; Q25=0.1667,mechanism lower-tail failure
+CarDS,mechanism-disjoint fold 1,HGB; 30 FAE/h; 1 s cooldown,reported probe configuration,Macro-TPR=0.8268; DER@100ms=0.2414; RMTTD@5s=2.313s,49.31,worst=0.0000; Q25=0.6667,mechanism lower-tail failure
+CarDS,mechanism-disjoint fold 2,HGB; 30 FAE/h; 1 s cooldown,reported probe configuration,Macro-TPR=0.3876; DER@100ms=0.0536; RMTTD@5s=4.178s,5.47,worst=0.0000; Q25=0.1667,mechanism lower-tail failure
+CarDS,3 budgets x 3 cooldowns x 3 folds,HGB vs TCN vs LR,operational sensitivity grid,Macro-TPR winner changes from HGB to TCN,HGB lowest in 9/9 grid cells,HGB highest DER@100ms in 9/9 grid cells,operational-rule sensitivity

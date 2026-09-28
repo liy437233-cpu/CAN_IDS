@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "contract_id": "CAN_IDS_ENDPOINT_APPLICABILITY_V1",
+  "config_file": "E:/CAN/release/CANIDS/configs/endpoint_applicability.json",
+  "config_sha256": "46fcc5f5665157c9cc34653cd9c92d708a24183e6f06f77607aff4111d12df4c",
+  "dataset_count": 4,
+  "design_dataset_count": 3,
+  "external_exercise_dataset_count": 1,
+  "endpoint_decision_count": 20,
+  "mismatches": [],
+  "interpretation_boundary": "Deterministic replay verifies the encoded metadata and rules; it does not establish inter-rater agreement for metadata encoding."
+}

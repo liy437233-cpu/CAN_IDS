@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "backend": "Python/Matplotlib 3.10.7",
+  "input_receipts": {
+    "ctat": {
+      "file": "ctat_label_granularity.csv",
+      "bytes": 297,
+      "sha256": "7ae2c420a4aa835ae627b00e04363ebe98a764153cf0ffe67247ba68ba369986"
+    },
+    "road": {
+      "file": "road_rank_reversal.csv",
+      "bytes": 333,
+      "sha256": "1580803dea0c1b1a619abc0241d51d23e554c71e6ad44a7e3e1884f9c14c5a50"
+    },
+    "cards_sensitivity": {
+      "file": "cards_operational_sensitivity.csv",
+      "bytes": 6788,
+      "sha256": "821369039a011a96ea94490665cfddc23a3f541fd64e4cd5c0765cfab7089f97"
+    },
+    "cards_mechanism": {
+      "file": "cards_mechanism_tpr.csv",
+      "bytes": 4886,
+      "sha256": "9766206f4ab48563eb8a98ada5b244db03132774537f9f2c1ed478f85ada1fa2"
+    },
+    "main_table": {
+      "file": "main_result_table.csv",
+      "bytes": 1869,
+      "sha256": "c3f16c6bc7e69911b0e5310654250367ded2cfd99f1d491da1e931bfba9065b0"
+    },
+    "contract": {
+      "file": "dataset_endpoint_contract.csv",
+      "bytes": 3385,
+      "sha256": "eaa3b71b749ff4b8fec14a7f1c457fb5b2f258e9e907ca5489ecc17fffff3d77"
+    }
+  },
+  "row_counts": {
+    "ctat": 4,
+    "road": 3,
+    "cards_sensitivity": 27,
+    "cards_mechanism": 33,
+    "main_table": 8,
+    "contract": 20
+  },
+  "figures": {
+    "figure2": {
+      "png": {
+        "path": "figures/figure2_endpoint_applicability_and_rank_divergence.png",
+        "bytes": 376522,
+        "sha256": "92c85e96f894ff963cb344cb8822e2e6fbe40729362416c46b0d52bb5cc7a76e"
+      },
+      "pdf": {
+        "path": "figures/figure2_endpoint_applicability_and_rank_divergence.pdf",
+        "bytes": 47986,
+        "sha256": "43390eef60a5d7719fd0de577c903ec715332a13d0e73853d6f00fbfd5a259a3"
+      },
+      "svg": {
+        "path": "figures/figure2_endpoint_applicability_and_rank_divergence.svg",
+        "bytes": 32373,
+        "sha256": "3a4251bdb8aea8e1c3479b023871f77525f234c8871f189b0d53ce3401defe5a"
+      }
+    },
+    "figure3": {
+      "png": {
+        "path": "figures/figure3_cards_operational_sensitivity.png",
+        "bytes": 434612,
+        "sha256": "08afde1af8172673417023471e5d4379792dec4e8cfe794a14a8ecb75697522c"
+      },
+      "pdf": {
+        "path": "figures/figure3_cards_operational_sensitivity.pdf",
+        "bytes": 48592,
+        "sha256": "bfb2eb37f947dd2bd28db43c011293846739c5a6cd8052093ceda840573e249e"
+      },
+      "svg": {
+        "path": "figures/figure3_cards_operational_sensitivity.svg",
+        "bytes": 62488,
+        "sha256": "a4e34d5c7ab826c98b51666ea301fcf37c49ec0a9b4ca7faf748206855398ef1"
+      }
+    },
+    "figure4": {
+      "png": {
+        "path": "figures/figure4_cards_mechanism_tail_risk.png",
+        "bytes": 159115,
+        "sha256": "0bb51130b2eeff52b4625d71d46764a61d68c69b97f5a0f530bb151d08df4690"
+      },
+      "pdf": {
+        "path": "figures/figure4_cards_mechanism_tail_risk.pdf",
+        "bytes": 37834,
+        "sha256": "4a29962484f822e2685af24d74c4062c93d4ff160bbc9a90520fdfec3b7acc07"
+      },
+      "svg": {
+        "path": "figures/figure4_cards_mechanism_tail_risk.svg",
+        "bytes": 30958,
+        "sha256": "148b00bd9fe38af666a3d5cbddf937bd5636e0b903d009154f4a3a348a137c83"
+      }
+    }
+  },
+  "boundaries": [
+    "No cross-dataset pooled model score",
+    "CTAT positive-label microsegments are not treated as physical attack campaigns",
+    "TCN seed-fold observations are not treated as independent datasets"
+  ]
+}

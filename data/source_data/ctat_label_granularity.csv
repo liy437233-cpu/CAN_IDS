@@ -1,0 +1,5 @@
+task,unique_microsegments,median_frames,median_duration_ms,single_frame_fraction,duration_le_10ms_fraction
+set_01,11419,1.0,0.0,0.817672300551712,1.0
+set_02,7072,1.0,0.0,0.6681278280542986,0.9645079185520362
+set_03,76151,1.0,0.0,0.6455332168980052,1.0
+set_04,152682,1.0,0.0,0.7136990607930208,1.0

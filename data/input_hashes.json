@@ -1,0 +1,18 @@
+{
+  "cards_archive": {
+    "bytes": 3628841816,
+    "md5": "853c67c20c5a55d9c2d59cce61094f67"
+  },
+  "cards_cached_payloads": {
+    "advanced": {"bytes": 380885293, "sha256": "5190fa7e4c4a8c954ecfbcb03d1d699a0d2d38e83a6f90f2e289a09c1164da55"},
+    "benign": {"bytes": 759524429, "sha256": "4f0717f2f12af0492acdba37e2e55e61337bd9ac429640fbd0fa12b282d46b3c"},
+    "dos": {"bytes": 277530568, "sha256": "a2b9d0b116fd5430c1e28bd88e6472507e4d9a7c343a0f32d1ef9d232c1d7200"},
+    "fuzzing": {"bytes": 454419204, "sha256": "648ac67b9135d8835f1c04b8b6ae64b690c8190438e597d011215fcfe4c8637d"},
+    "replay": {"bytes": 447613197, "sha256": "c8a1cd2de55ba0fea0446b46fa22d99ac0690f12b0b5288ac9753ae4cbdd3f44"},
+    "spoofing": {"bytes": 252858127, "sha256": "d195227f59d7768cde3f375f2a4dc42fb5e25e30464d78ca403ac613cea884ac"},
+    "v_mode": {"bytes": 374711001, "sha256": "409297f5342b954bce8eca9c8c1e944562f706471206c93ef0390fc156bb41a0"}
+  },
+  "cards_trace_roles_sha256": "207c8f343295da4ae54585d9d4abeaf3fbca08f1c80d875efcf06c6b3f530f2f",
+  "road_dataset_sha256": "0e4fe6ed7f99b5cdabf6b772c91a2025c614a071ba8579c532904d0ef7aea5f6"
+}
+

@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "file": "cards_trace_roles.csv",
+      "bytes": 94988,
+      "rows": 774,
+      "sha256": "207c8f343295da4ae54585d9d4abeaf3fbca08f1c80d875efcf06c6b3f530f2f"
+    },
+    {
+      "file": "ctat_manifest.csv",
+      "bytes": 37998,
+      "rows": 236,
+      "sha256": "02e8f7f5b8abb2f4172137688ea8ca207decab433c657cf5869b0c693b1e3841"
+    },
+    {
+      "file": "road_activity_groups.csv",
+      "bytes": 6882,
+      "rows": 45,
+      "sha256": "41876d7293dd578c41f7aaadfa8105f22b4082a9f90e119a3b2871daa071023d"
+    }
+  ]
+}

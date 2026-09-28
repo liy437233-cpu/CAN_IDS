@@ -1,0 +1,77 @@
+{
+  "protocol_id": "CARDS_TRAINING_V1",
+  "data": {
+    "archive": "data/raw/CarDS.zip",
+    "expected_bytes": 3628841816,
+    "expected_md5": "853c67c20c5a55d9c2d59cce61094f67",
+    "role_csv": "data/protocol/cards_trace_roles.csv",
+    "role_csv_sha256": "207c8f343295da4ae54585d9d4abeaf3fbca08f1c80d875efcf06c6b3f530f2f",
+    "outer_folds": [0, 1, 2],
+    "ethernet_primary": false
+  },
+  "normal_reference_split": {
+    "reference_traces_per_fold": 10,
+    "negative_training_traces_per_fold": 9,
+    "calibration_role": "normal_calibration",
+    "outer_test_role": "outer_test_normal",
+    "trace_assignment": {
+      "0": {
+        "reference_traces": ["Benign-Standstill-University-NA-IVI_DownloadGames.log", "Benign-Standstill-University-NA-NA_2.log", "Benign-Standstill-University-NA-T2_ReadMiscBatteryData.log", "Benign-SlowDriving-University-NA-GearSwitch.log", "Benign-Standstill-University-NA-BusSilence.log", "Benign-SlowDriving-DrivingSchool-NA-NA.log", "Benign-Standstill-University-NA-BusSilenceWakeUp.log", "Benign-ReverseDriving-University-NA-NA_1.log", "Benign-Standstill-University-NA-T1_ReadDTC_1.log", "Benign-SlowDriving-University-NA-Sunroof.log"],
+        "normal_training_traces": ["Benign-Standstill-University-NA-IgnitionOff.log", "Benign-Standstill-University-NA-T1_DeleteDTC_1.log", "Benign-Standstill-University-NA-Sunroof.log", "Benign-Standstill-University-NA-Indicators.log", "Benign-Standstill-University-NA-NA_1.log", "Benign-SlowDriving-University-NA-NA_1.log", "Benign-Standstill-University-NA-T1_ReadMisc.log", "Benign-Standstill-University-NA-T2_ControlSunroof.log", "Benign-Standstill-University-NA-T2_ReadVIN.log"]
+      },
+      "1": {
+        "reference_traces": ["Benign-SlowDriving-University-NA-GearSwitch.log", "Benign-ReverseDriving-University-NA-NA_1.log", "Benign-Standstill-University-NA-T1_RecognizeCar.log", "Benign-Standstill-University-NA-T1_DeleteDTC_1.log", "Benign-Standstill-University-NA-IgnitionOff_FailedUpdate.log", "Benign-Standstill-University-NA-GearSwitch.log", "Benign-ReverseDriving-University-NA-NA_2.log", "Benign-Standstill-University-NA-IgnitionOff.log", "Benign-SlowDriving-DrivingSchool-NA-NA.log", "Benign-Standstill-University-NA-IgnitionOff_LockUnlock.log"],
+        "normal_training_traces": ["Benign-ReverseDriving-DrivingSchool-NA-NA.log", "Benign-Standstill-University-NA-T2_ReadDTC.log", "Benign-Standstill-University-NA-IVI_DownloadGames.log", "Benign-Standstill-University-NA-T1_DeleteDTC_2.log", "Benign-Standstill-University-NA-T2_ReadMiscBatteryData.log", "Benign-Standstill-University-NA-IVI_Update.log", "Benign-Standstill-University-NA-T1_ReadDTC_1.log", "Benign-Standstill-University-NA-BusSilence.log", "Benign-Standstill-University-NA-T2_ReadMilage.log"]
+      },
+      "2": {
+        "reference_traces": ["Benign-Standstill-University-NA-NA_1.log", "Benign-Standstill-University-NA-BusSilenceWakeUp.log", "Benign-Standstill-University-NA-T1_ReadMisc.log", "Benign-SlowDriving-University-NA-NA_1.log", "Benign-Standstill-University-NA-Indicators.log", "Benign-Standstill-University-NA-T2_ReadAfterDeleteDTC.log", "Benign-Standstill-University-NA-IVI_Update.log", "Benign-SlowDriving-University-NA-NA_2.log", "Benign-Standstill-University-NA-GearSwitch.log", "Benign-Standstill-University-NA-IgnitionOff_FailedUpdate.log"],
+        "normal_training_traces": ["Benign-Standstill-University-NA-T2_DeleteDTC.log", "Benign-Standstill-University-NA-T2_Discovery.log", "Benign-Standstill-University-NA-T2_ControlSunroof.log", "Benign-Standstill-University-NA-Sunroof.log", "Benign-FastDriving-DrivingSchool-NA-NA.log", "Benign-Standstill-University-NA-T2_ReadSunroofData.log", "Benign-Standstill-University-NA-T2_ReadDTC.log", "Benign-SlowDriving-University-NA-Sunroof.log", "Benign-Standstill-University-NA-T2_ReadTelemetricData.log"]
+      }
+    }
+  },
+  "inputs": {
+    "sequence_length_same_bus": 16,
+    "groups": {
+      "identity": ["route_surprisal", "format_surprisal", "unseen_route", "unseen_format"],
+      "timing": ["iat_signed_z", "iat_abs_z", "density10_signed_z", "density10_abs_z", "density100_abs_z", "first_seen_id"],
+      "payload": ["hamming_fraction", "hamming_abs_z", "delta_surprisal", "changed_byte_fraction", "byte_surprisal_mean", "byte_surprisal_max"],
+      "context": ["predecessor_surprisal", "unseen_predecessor", "recent_id_entropy_abs_z", "route_mix_divergence", "same_id_gap_rank_z"]
+    },
+    "normalization": "reference_median_mad_clip_10",
+    "forbidden_model_inputs": ["absolute_timestamp", "direction_R_T", "trace_filename", "attack_family", "attack_mechanism", "raw_bus_id", "raw_can_id"],
+    "direction_R_T_use": "target_only"
+  },
+  "sampling": {
+    "positive_window_cap_per_mechanism": 10000,
+    "positive_trace_cap": 4000,
+    "normal_to_attack_ratio": 1.0,
+    "attack_sampling": "uniform_mechanism_then_trace",
+    "normal_sampling": "uniform_trace",
+    "reservoir_seed": 20260908
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 15,
+    "batch_size": 2048,
+    "gradient_clip_norm": 5.0,
+    "stochastic_seeds": [20260908, 20260909, 20260910],
+    "device_preference": ["cuda", "cpu"],
+    "mixed_precision_cuda": true,
+    "test_time_recalibration": false
+  },
+  "comparators": {
+    "logistic_regression": {"C": 1.0, "class_weight": "balanced", "max_iter": 1000},
+    "hgb": {"max_iter": 200, "learning_rate": 0.05, "max_leaf_nodes": 31, "l2_regularization": 0.001, "random_state": 20260908},
+    "early_fusion_tcn": "causal_16_by_21_same_bus_sequence",
+    "residual_max": "maximum_current_frame_group_residual"
+  },
+  "alarm": {
+    "calibration_budget_fae_per_hour": 30.0,
+    "cooldown_seconds": 1.0,
+    "threshold_source": "normal_calibration_only",
+    "threshold_selection": "lowest_empirical_threshold_with_fae_h_at_or_below_budget",
+    "outer_test_threshold_change": false
+  }
+}

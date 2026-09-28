@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "required_files",
+      "status": "PASS",
+      "detail": "41 files present"
+    },
+    {
+      "check": "source_data_hashes",
+      "status": "PASS",
+      "detail": "5 files verified"
+    },
+    {
+      "check": "protocol_hashes",
+      "status": "PASS",
+      "detail": "2 files verified"
+    },
+    {
+      "check": "training_protocol_files",
+      "status": "PASS",
+      "detail": "3 files verified"
+    },
+    {
+      "check": "source_row_counts",
+      "status": "PASS",
+      "detail": "all source row counts match"
+    },
+    {
+      "check": "protocol_row_counts",
+      "status": "PASS",
+      "detail": "all protocol row counts match"
+    },
+    {
+      "check": "numeric_anchors",
+      "status": "PASS",
+      "detail": "{\"cards_primary\": true, \"ctat_total\": true, \"road_frame\": true, \"road_rmttd\": true, \"road_timing\": true, \"zero_folds\": true}"
+    },
+    {
+      "check": "endpoint_contract",
+      "status": "PASS",
+      "detail": "{\"cards_frame_A\": true, \"ctat_event_NA\": true, \"hcrl_event_D\": true, \"pooling_P\": true, \"row_count\": true}"
+    },
+    {
+      "check": "generated_outputs",
+      "status": "PASS",
+      "detail": "11 generated files present"
+    },
+    {
+      "check": "public_text_scan",
+      "status": "PASS",
+      "detail": "no internal stage labels or local paths"
+    }
+  ]
+}

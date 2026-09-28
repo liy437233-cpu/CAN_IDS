@@ -1,0 +1,67 @@
+{
+  "contract_id": "CAN_IDS_ENDPOINT_APPLICABILITY_V1",
+  "status_vocabulary": {
+    "A": "semantically admissible as a formal within-dataset endpoint",
+    "D": "descriptive or proxy use only",
+    "N/A": "not supported by the available label semantics or metadata",
+    "P": "prohibited for pooled cross-dataset performance inference"
+  },
+  "datasets": [
+    {
+      "dataset_id": "ROAD",
+      "design_role": "event-interval evidence",
+      "used_to_design_rules": true,
+      "frame_labels": {"type": "proxy_reconstructed"},
+      "event_metadata": {"explicit_intervals": true, "label_anchored_start": true, "grouping_requires_heuristic": false, "physical_command_time": false},
+      "normal_evaluation": {"separate_records": true, "duration_available": true, "context_shift_warning": false},
+      "mechanism_evaluation": {"labels_available": true, "group_count": 16, "mechanism_disjoint_holdout": false},
+      "external_validity": {"single_vehicle": true},
+      "cross_dataset_pooling": {"common_label_semantics": false, "common_probe_representation": false},
+      "evidence": ["https://doi.org/10.5281/zenodo.10462796", "https://doi.org/10.1371/journal.pone.0296879"],
+      "expected_contract": {"frame_classification": "D", "event_response": "A", "independent_normal_alarm_burden": "A", "mechanism_tail": "D", "cross_dataset_pooled_score": "P"},
+      "paper_reporting_role": {"frame_classification": "secondary", "event_response": "primary", "independent_normal_alarm_burden": "primary", "mechanism_tail": "secondary", "cross_dataset_pooled_score": "excluded"}
+    },
+    {
+      "dataset_id": "CTAT",
+      "design_role": "frame-label semantic negative control",
+      "used_to_design_rules": true,
+      "frame_labels": {"type": "exact_publisher"},
+      "event_metadata": {"explicit_intervals": false, "label_anchored_start": false, "grouping_requires_heuristic": true, "physical_command_time": false},
+      "normal_evaluation": {"separate_records": true, "duration_available": true, "context_shift_warning": false},
+      "mechanism_evaluation": {"labels_available": true, "group_count": 4, "mechanism_disjoint_holdout": false},
+      "external_validity": {"single_vehicle": false},
+      "cross_dataset_pooling": {"common_label_semantics": false, "common_probe_representation": false},
+      "evidence": ["https://doi.org/10.11583/DTU.24805533", "https://doi.org/10.1016/j.cose.2024.103777"],
+      "expected_contract": {"frame_classification": "A", "event_response": "N/A", "independent_normal_alarm_burden": "A", "mechanism_tail": "D", "cross_dataset_pooled_score": "P"},
+      "paper_reporting_role": {"frame_classification": "primary_supporting", "event_response": "excluded", "independent_normal_alarm_burden": "secondary", "mechanism_tail": "excluded", "cross_dataset_pooled_score": "excluded"}
+    },
+    {
+      "dataset_id": "CarDS",
+      "design_role": "label-anchored event and mechanism-disjoint evidence",
+      "used_to_design_rules": true,
+      "frame_labels": {"type": "exact_publisher"},
+      "event_metadata": {"explicit_intervals": false, "label_anchored_start": true, "grouping_requires_heuristic": false, "physical_command_time": false},
+      "normal_evaluation": {"separate_records": true, "duration_available": true, "context_shift_warning": false},
+      "mechanism_evaluation": {"labels_available": true, "group_count": 34, "mechanism_disjoint_holdout": true},
+      "external_validity": {"single_vehicle": true},
+      "cross_dataset_pooling": {"common_label_semantics": false, "common_probe_representation": false},
+      "evidence": ["https://doi.org/10.48328/tudatalib-2179"],
+      "expected_contract": {"frame_classification": "A", "event_response": "A", "independent_normal_alarm_burden": "A", "mechanism_tail": "A", "cross_dataset_pooled_score": "P"},
+      "paper_reporting_role": {"frame_classification": "secondary", "event_response": "primary", "independent_normal_alarm_burden": "primary", "mechanism_tail": "primary", "cross_dataset_pooled_score": "excluded"}
+    },
+    {
+      "dataset_id": "HCRL-CH",
+      "design_role": "external metadata exercise only",
+      "used_to_design_rules": false,
+      "frame_labels": {"type": "exact_publisher"},
+      "event_metadata": {"explicit_intervals": false, "label_anchored_start": true, "grouping_requires_heuristic": true, "physical_command_time": false},
+      "normal_evaluation": {"separate_records": true, "duration_available": true, "context_shift_warning": true},
+      "mechanism_evaluation": {"labels_available": true, "group_count": 4, "mechanism_disjoint_holdout": false},
+      "external_validity": {"single_vehicle": true},
+      "cross_dataset_pooling": {"common_label_semantics": false, "common_probe_representation": false},
+      "evidence": ["https://ocslab.hksecurity.net/Datasets/CAN-intrusion-dataset", "https://doi.org/10.1371/journal.pone.0296879"],
+      "expected_contract": {"frame_classification": "A", "event_response": "D", "independent_normal_alarm_burden": "A", "mechanism_tail": "D", "cross_dataset_pooled_score": "P"},
+      "paper_reporting_role": {"frame_classification": "external_check_only", "event_response": "external_check_only", "independent_normal_alarm_burden": "external_check_only", "mechanism_tail": "external_check_only", "cross_dataset_pooled_score": "external_check_only"}
+    }
+  ]
+}

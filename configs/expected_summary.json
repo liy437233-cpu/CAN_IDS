@@ -1,0 +1,22 @@
+{
+  "row_counts": {
+    "ctat_label_granularity.csv": 4,
+    "road_rank_reversal.csv": 3,
+    "cards_operational_sensitivity.csv": 27,
+    "cards_mechanism_tpr.csv": 33,
+    "main_result_table.csv": 8,
+    "dataset_endpoint_contract.csv": 20
+  },
+  "protocol_row_counts": {
+    "cards_trace_roles.csv": 774,
+    "road_group_inventory.csv": 84
+  },
+  "numeric_anchors": {
+    "ctat_unique_microsegments_total": 247324,
+    "road_frame_macro_f1_frame_probe": 0.9061366490907569,
+    "road_der_100ms_timing_probe": 1.0,
+    "road_rmttd_5s_timing_probe": 0.0037973121316847024,
+    "cards_hgb_primary_macro_tpr_mean": 0.5688740272073606,
+    "cards_zero_detection_fold_count": 3
+  }
+}

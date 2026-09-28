@@ -1,0 +1,71 @@
+{
+  "manifest_version": 2,
+  "aggregation_inputs": {
+    "road": [
+      {
+        "file": "attack_event_oof.csv",
+        "sha256": "e2e41d81dadbb1a8b6fceab23bb6d1c0aaf21d74da74c78a59caa5e1eec66a08"
+      },
+      {
+        "file": "frame_capture_oof.csv",
+        "sha256": "306f7a8b8d2fc8a8496f22b699c03c452833f8a58d01a75fd6bbd78a931e9c36"
+      },
+      {
+        "file": "normal_capture_oof.csv",
+        "sha256": "80d7f50bcd79b5e4405600365375ac6115d98505f2237b2385bd1f2beeffa520"
+      }
+    ],
+    "ctat": [
+      {
+        "file": "ctat_event_test.csv",
+        "sha256": "8119796cac7095334f22a954fceca29510ec3b4363c99d625086e920a8da853c"
+      }
+    ],
+    "cards": [
+      {
+        "file": "fold_0_result.json",
+        "sha256": "cd87fbb378038b878e46abef940fba21a0f6a5628452a43e45f135c48f25c01f"
+      },
+      {
+        "file": "fold_1_result.json",
+        "sha256": "a0734f4c10af178066ac7c52ae89cb44a4efaf37fa52f9fd5a709c88db1ba97d"
+      },
+      {
+        "file": "fold_2_result.json",
+        "sha256": "7a0c5dc8125d25c0b6b74cdd3373e3f1ea5dc496561ea5c297b7abfef20ac6ca"
+      }
+    ]
+  },
+  "files": [
+    {
+      "file": "cards_mechanism_tpr.csv",
+      "bytes": 4886,
+      "sha256": "9766206f4ab48563eb8a98ada5b244db03132774537f9f2c1ed478f85ada1fa2",
+      "rows": 33
+    },
+    {
+      "file": "cards_operational_sensitivity.csv",
+      "bytes": 6788,
+      "sha256": "821369039a011a96ea94490665cfddc23a3f541fd64e4cd5c0765cfab7089f97",
+      "rows": 27
+    },
+    {
+      "file": "ctat_label_granularity.csv",
+      "bytes": 297,
+      "sha256": "7ae2c420a4aa835ae627b00e04363ebe98a764153cf0ffe67247ba68ba369986",
+      "rows": 4
+    },
+    {
+      "file": "main_result_table.csv",
+      "bytes": 1869,
+      "sha256": "c3f16c6bc7e69911b0e5310654250367ded2cfd99f1d491da1e931bfba9065b0",
+      "rows": 8
+    },
+    {
+      "file": "road_rank_reversal.csv",
+      "bytes": 333,
+      "sha256": "1580803dea0c1b1a619abc0241d51d23e554c71e6ad44a7e3e1884f9c14c5a50",
+      "rows": 3
+    }
+  ]
+}
