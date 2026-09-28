@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this software and the original dataset records."
+title: "Operational Evaluation of CAN Intrusion Detection"
+type: software
+version: 1.1.0
+date-released: 2026-09-25
+authors:
+  - name: "The Authors"
+license: MIT
